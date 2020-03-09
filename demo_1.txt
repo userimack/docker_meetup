@@ -1,0 +1,16 @@
+docker pull alpine
+
+docker run -it alpine sh
+
+# apk update
+# apk upgrade
+# apk add tree
+
+docker commit <commit id> userimack/alpine_with_tree
+
+docker run userimack/alpine_with_tree
+
+docker push userimack/alpine_with_tree
+
+
+docker exec -it <container_id_or_name> echo "Hello from container!"
